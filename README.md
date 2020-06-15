@@ -39,12 +39,15 @@ two new order book based metrics
 i.	Bid/Ask Spread 
 Bid/Ask Spread = (Lowest Ask – Highest Bid) / Lowest Ask x 100
 The Bid/Ask Spread is the amount by which the ask price (lowest price a seller is willing to sell) exceeds the bid price (highest price a buyer is willing to buy) for an asset in any particular market. This spread is represented in a percentage format and is a good measure of liquidity. A lower bid/ask spread will mean that a particular market is more liquid while a higher bid/ask spread will mean that it is more illiquid. 
+
 ii.	± 2% Depth Cost
 when combined with trading volume data provides a better overview of the real liquidity of any given trading pair on an exchange. 
 (Capital in USD required to move the order book by 2% up or down from last traded price.)
+
 1)first take the last done price for any particular market and then calculate the 2% upper and lower bound. Assuming BTC/USDT for a particular exchange was last traded at $6,000, the 2% upper bound is thus $6,120 and the 2% lower bound is thus $5,880.
 2) sum up the amount of BTC sitting in the order book between $6,000 and $6,120 and then multiply it by the order price. This is the amount of capital required to move the order book up by 2% and we call it +2% Depth.
 3) sum up the amount of BTC sitting in the order book between $5,880 and $6,000 and then also multiply it by the order price. This is the amount of capital required to move the order book down by 2% and we call it -2% Depth.
+
 A thick order book will indicate that there is more liquidity for any trader to come in and buy or sell a particular crypto asset without much slippage while a thin order book will indicate that there is no liquidity for any trader to trade meaningfully.
 
 
