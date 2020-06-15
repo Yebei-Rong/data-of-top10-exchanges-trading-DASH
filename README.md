@@ -9,6 +9,7 @@ Use exchange API to get trading data of DASH
 First Step: 
 Crypto Exchange Ranking by Cyber Security Score(CSS) 
 the recent report can be referred by https://cer.live
+
 Cyber Security Score (CSS) is one of the main metrics provided by Crypto Exchange Ranks (CER) to calculate the complex rating of crypto exchanges. 
 (reason: cybersecurity is the most fundamental thing that must be addressed to the full extent by any exchange before commencing its operations: exchanges must take responsibility for users’ money and personal data. )
 To know whether the exchanges are sustainable and safe for using from three aspects: 
@@ -28,8 +29,9 @@ use them as benchmark may cause some problems
 The normalization of exchange volumes involves several steps, which we will walk you through below:
 1	We aggregate monthly web traffic statistics from SimilarWeb for all crypto exchanges that we track on CoinGecko. We then divide it by 30 to get average daily traffic.
 2	Together with the daily reported trading volume information that we track, we are able to derive the Average Daily User Trading Volume (ADUTV) for each exchange.
-
-Then, based on the Bitwise 10 Real Volume Exchanges (Binance, Bitfinex, Kraken, Bitstamp, Coinbase, Bitflyer, Gemini, itBit, Bittrex, Poloniex), we calculate the median for the 10 exchanges ADUTV and we call this the Benchmark Daily User Volume. 
+ADUTV(EXCHANGE x) = DAILY VOLUME(EXCHANGE x)/DAILY VISITORS(EXCHANGE X)
+3 Then, based on the Bitwise 10 Real Volume Exchanges (Binance, Bitfinex, Kraken, Bitstamp, Coinbase, Bitflyer, Gemini, itBit, Bittrex, Poloniex), we calculate the median for the 10 exchanges ADUTV and we call this the Benchmark Daily User Volume. 
+Benchmark = median(ADUTV-binance, ADUTV - Bitfinex...)
 We then derive a Normalized Exchange Total Trading Volume based on this Benchmark. Exchanges with lower ADUTV when compared to the Benchmark will not have their Reported Trading Volume normalized. However, for exchanges reporting ADUTV higher than Benchmark, we will discard their ADUTV and multiply their SimilarWeb daily traffic estimate and multiply it against the Benchmark.
 
 2) Order Book Analysis (Bid/Ask Spread & ±2% Depth Cost)
